@@ -2,8 +2,7 @@ console.log('%c HI', 'color: firebrick')
 
 const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
 const breedUrl = 'https://dog.ceo/api/breeds/list/all'
-const breedName = document.getElementsByClassName('breedName')
-// let imgContainer = document.querySelector('#dog-image-container')
+
 let imgArray = []
 let breedArray = []
 let breedData = {}
@@ -23,17 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
             breedArray = Object.keys(breedData)
             return breedArray})
         .then( breedArray => breedArray.map(item => addBreed(item)))
-    
-        
-    })
+})
 
 function addImage (item) {
     let imgTag = document.createElement('img')
     document.querySelector('#dog-image-container').appendChild(imgTag)
     imgTag.setAttribute ('src',item)
     imgTag.setAttribute ('width','300px')
-    
-    }
+}
 
 function addBreed (item) {
     // debugger;
