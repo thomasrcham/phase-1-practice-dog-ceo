@@ -38,5 +38,5 @@ function addBreed (item) {
     newBreed.setAttribute ('class','breedName')
     document.querySelector('#dog-breeds').append(newBreed)
     newBreed.addEventListener('click', (e) => {
-        newBreed.setAttribute('style','red')})
+        newBreed.setAttribute('style','color: red')})
 }
